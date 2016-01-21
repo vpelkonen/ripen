@@ -1,0 +1,43 @@
+{
+  "name": "ripen",
+  "version": "1.0.0",
+  "description": "Bring your plans to fruition.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpelkonen/ripen.git"
+  },
+  "keywords": [
+    "ripen",
+    "workflow",
+    "react",
+    "timer",
+    "list"
+  ],
+  "author": "Ville Pelkonen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vpelkonen/ripen/issues"
+  },
+  "homepage": "https://github.com/vpelkonen/ripen#readme",
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.7.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.11"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^1.14.1"
+  }
+}
