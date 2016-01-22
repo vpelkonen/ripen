@@ -1,11 +1,11 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-var config = {
+const config = {
     entry: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8080',
-      path.resolve(__dirname, 'app/main.js')
+      path.resolve(__dirname, 'src/main.js')
     ],
     output: {
         path: path.resolve(__dirname, 'build'),

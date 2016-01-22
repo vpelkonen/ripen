@@ -1,15 +1,15 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var node_modules_dir = path.resolve(__dirname, 'node_modules');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const node_modules_dir = path.resolve(__dirname, 'node_modules');
 
-var config = {
+const config = {
     entry: {
-        app: path.resolve(__dirname, 'app/main.js'),
+        app: path.resolve(__dirname, 'src/main.js'),
         vendors: ['react', 'react-dom']
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'web'),
         filename: 'app.js',
   },
   module: {
