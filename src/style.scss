@@ -1,4 +1,49 @@
+/* BUTTON CSS RESET */
+/* Base */
+body {
+    color: green;
+    font-family: "Georgia", serif;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* SASS presets */
 $primary-color:rgb(230,80,70);
+$primary-color-dark:rgb(200,50,40);
 $secondary-color:rgb(40,180,180);
 $bg-color:#fff;
 
@@ -8,5 +53,36 @@ h1{
 
 body{
 	background-color: $bg-color;
+	/* Font */
+	font-family: 'Verdana', 'Arial', sans-serif;
+	font-size:16px;
+	line-height: 1.46rem;
 }
 
+#app{
+    display: flex;
+    justify-content: center;
+}
+
+.timerClock{
+    display: flex;
+    justify-content: center;
+	font-size: 3rem;
+	color:#fff;
+	background-color: $primary-color;
+	width: 280px;
+	height:280px;
+	border-radius: 140px;
+	transition: 200ms background-color, 50ms transform;
+    margin:1rem;
+
+	&:focus{
+	    box-shadow: 0 0 0 2px $primary-color-dark;
+	    outline:none;
+	}
+
+    &:active{
+        background-color:$primary-color-dark;
+        transform:scale(0.99);
+    }
+}
