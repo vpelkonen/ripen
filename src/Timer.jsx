@@ -5,14 +5,15 @@ const Timer = React.createClass({
 	getInitialState: function(){
 		return {
 			timerOn: false,
-			secondsElapsed: 0 // 5 = 25 min
+			totalSeconds: 5,
+			secondsElapsed: 0
 		};
 	},
 	tick: function(){
-		if(this.state.timerOn && this.state.secondsElapsed != 5){
+		if(this.state.timerOn && this.state.secondsElapsed != this.state.totalSeconds){
 			this.setState({ secondsElapsed: this.state.secondsElapsed + 1 });
 		}
-		else if(this.state.timerOn && this.state.secondsElapsed >= 5){
+		else if(this.state.timerOn && this.state.secondsElapsed >= this.state.totalSeconds){
 			alert("YO");
 			this.setState({ timerOn: false });
 		}
@@ -27,11 +28,13 @@ const Timer = React.createClass({
     	return (new Array(3).join('0')+str).slice(-2);
 	},
 	handleClick: function(e){
-		this.setState({timerOn: !this.state.timerOn});
+		if(this.state.secondsElapsed < this.state.totalSeconds){
+			this.setState({timerOn: !this.state.timerOn});
+		}
 	},
 	render(){
-		let minutes = Math.floor((5 - this.state.secondsElapsed) / 60);
-		let seconds = this.fixDigit((5 - this.state.secondsElapsed) - minutes * 60);
+		let minutes = Math.floor((this.state.totalSeconds - this.state.secondsElapsed) / 60);
+		let seconds = this.fixDigit((this.state.totalSeconds - this.state.secondsElapsed) - minutes * 60);
 		return(
 			<button className="timerClock" onClick={ this.handleClick }> {minutes + ":" + seconds}</button>
 		);
