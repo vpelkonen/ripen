@@ -1,3 +1,12 @@
+$primary-color:rgb(230,80,70);
+$secondary-color:rgb(40,180,180);
+$bg-color:#fff;
+
 h1{
-	color:#ff8c00;
+	color:$primary-color;
 }
+
+body{
+	background-color: $bg-color;
+}
+

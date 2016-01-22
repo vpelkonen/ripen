@@ -1,7 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+var config = {
     entry: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:8080',
@@ -30,7 +30,9 @@ module.exports = {
 		    }
     	]
     },
-	plugins: [new HtmlWebpackPlugin({
-		title:'Ripen'
-	})]
+	plugins: [
+		new HtmlWebpackPlugin({ title:'Ripen', hash:true, templateContent:'<div id="app"></div>', inject:true }),
+	]
 };
+
+module.exports = config;
