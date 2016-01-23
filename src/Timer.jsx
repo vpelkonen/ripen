@@ -32,7 +32,7 @@ const Timer = React.createClass({
 			this.setState({timerOn: !this.state.timerOn});
 		}
 	},
-	render(){
+	render: function(){
 		let minutes = Math.floor((this.state.totalSeconds - this.state.secondsElapsed) / 60);
 		let seconds = this.fixDigit((this.state.totalSeconds - this.state.secondsElapsed) - minutes * 60);
 		return(

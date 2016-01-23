@@ -16,12 +16,12 @@ const TaskInput = React.createClass({
 	formAction: function(){
 
 	},
-	render(){
+	render: function(){
 		// Fill in existing tasks with autocorrec (possibly show autocorrect taska in order always on focus)
 		return(
 			<form action={ this.formAction }>
 				<p>TASK</p>
-				<input type="text" maxLength="80" name="taskName" />
+				<input type="text" maxLength="100" name="taskName" />
 			</form>
 		);
 	}

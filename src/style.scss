@@ -41,19 +41,20 @@ button::-moz-focus-inner {
     padding: 0;
 }
 
+
+
+
 /* SASS presets */
 $primary-color:rgb(200,50,40);
 $primary-color-dark:rgb(130,30,20);
 $secondary-color:rgb(40,180,180);
-$bg-color:#fff;
-
-h1{
-	color:$primary-color;
-}
+$bg-color:#eee;
+$universal-max-width: 480px;
 
 body{
 	background-color: $bg-color;
-    color:#556556;
+    color:#656565;
+    margin:50px 1rem 20px 1rem;
 	/* Font */
 	font-family: 'Verdana', 'Arial', sans-serif;
 	font-size:16px;
@@ -64,9 +65,14 @@ body{
     display: flex;
     justify-content: center;
 }
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: $universal-max-width;
+}
 
 .timerClock{
-    display: flex;
     justify-content: center;
 	font-size: 3rem;
 	color:#fff;
@@ -75,7 +81,6 @@ body{
 	height:280px;
 	border-radius: 140px;
 	transition: 200ms background-color, 50ms transform;
-    margin:1rem;
 
 	&:focus{
 	    box-shadow: 0 0 0 2px $primary-color-dark;
@@ -89,15 +94,54 @@ body{
 }
 
 form{
+    width:100%;
 
     & input{
         width:100%;
-        min-height:2.5rem;
-        padding: 0 .4rem;
+        min-height:3.5rem;
+        padding: 0 1rem;
         word-break: break-word;
+        font-size: 1rem;
+        color:#333;
     }
     & p{
         margin:0;
-        font-size: .9rem;
+        font-size: 0.9rem;
+    }
+}
+
+header{
+    color:#fff;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: $primary-color;
+    padding:0.5rem 1rem;
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.5);
+
+    & h1 {
+        font-size:1rem;
+        font-weight: 400;
+        padding: 0;
+        margin:0;
+    }
+}
+
+.taskList{
+    list-style: none;
+    padding:0;
+
+    & li{
+        margin: 0.5rem 0;
+
+        & button{
+            color:#333;
+            width:92%;
+            padding: 1rem 4%;
+            background-color: #fff;
+            box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
+            text-align: left;
+        }
     }
 }
