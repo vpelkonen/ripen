@@ -5,7 +5,7 @@ const node_modules_dir = path.resolve(__dirname, 'node_modules');
 
 const config = {
     entry: {
-        app: path.resolve(__dirname, 'src/main.js'),
+        app: path.resolve(__dirname, 'src/app.js'),
         vendors: ['react', 'react-dom']
     },
     output: {

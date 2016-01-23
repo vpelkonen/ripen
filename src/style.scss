@@ -42,8 +42,8 @@ button::-moz-focus-inner {
 }
 
 /* SASS presets */
-$primary-color:rgb(230,80,70);
-$primary-color-dark:rgb(200,50,40);
+$primary-color:rgb(200,50,40);
+$primary-color-dark:rgb(130,30,20);
 $secondary-color:rgb(40,180,180);
 $bg-color:#fff;
 
@@ -53,6 +53,7 @@ h1{
 
 body{
 	background-color: $bg-color;
+    color:#556556;
 	/* Font */
 	font-family: 'Verdana', 'Arial', sans-serif;
 	font-size:16px;
@@ -84,5 +85,19 @@ body{
     &:active{
         background-color:$primary-color-dark;
         transform:scale(0.99);
+    }
+}
+
+form{
+
+    & input{
+        width:100%;
+        min-height:2.5rem;
+        padding: 0 .4rem;
+        word-break: break-word;
+    }
+    & p{
+        margin:0;
+        font-size: .9rem;
     }
 }

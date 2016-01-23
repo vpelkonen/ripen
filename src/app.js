@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Timer from './Timer.jsx';
+import Master from './Master.jsx';
 import './style.scss';
 
 main();
 
 function main() {
-    ReactDOM.render(<Timer />, document.getElementById('app'));
+    ReactDOM.render(<Master/>, document.getElementById('app'));
 }

@@ -41,4 +41,4 @@ const Timer = React.createClass({
 	}
 });
 
-module.exports = Timer;
+export default Timer;
